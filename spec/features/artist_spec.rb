@@ -21,28 +21,28 @@ describe 'navigate' do
   end
 end
 
-describe 'form' do
-  it 'shows a new form that submits content and redirects and prints out params' do
-    visit new_artist_path
+# describe 'form' do
+#   it 'shows a new form that submits content and redirects and prints out params' do
+#     visit new_artist_path
 
-    fill_in 'artist[name]', with: "My artist name"
-    fill_in 'artist[bio]', with: "My artist bio"
+#     fill_in 'artist[name]', with: "My artist name"
+#     fill_in 'artist[bio]', with: "My artist bio"
 
-    click_on "Create Artist"
+#     click_on "Create Artist"
 
-    expect(page).to have_content("My artist name")
-  end
+#     expect(page).to have_content("My artist name")
+#   end
 
-  it 'shows an edit form that submits content, redirects and prints out params' do
-    @artist = Artist.create(name: "My Artist", bio: "My artist bio")
+#   it 'shows an edit form that submits content, redirects and prints out params' do
+#     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
 
-    visit edit_artist_path(@artist)
+#     visit edit_artist_path(@artist)
 
-    fill_in 'artist[name]', with: "My edit"
-    fill_in 'artist[bio]', with: "My artist bio"
+#     fill_in 'artist[name]', with: "My edit"
+#     fill_in 'artist[bio]', with: "My artist bio"
 
-    click_on "Update Artist"
+#     click_on "Update Artist"
 
-    expect(page).to have_content("My edit")
-  end
-end
+#     expect(page).to have_content("My edit")
+#    end
+# end
